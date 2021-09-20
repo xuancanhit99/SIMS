@@ -4,7 +4,7 @@ global $conn;
 
 class Student
 {
-    function __construct($id, $email, $password, $name, $no, $avatar, $dob, $class, $phone, $gender, $active)
+    function __construct($id, $email, $password, $name, $no, $avatar, $dob, $class, $phone, $gender, $active, $notice, $report, $reply)
     {
         $this->StuId = $id;
         $this->StuEmail = $email;
@@ -17,6 +17,9 @@ class Student
         $this->StuPhone = $phone;
         $this->StuGender = $gender;
         $this->StuActive = $active;
+        $this->StuNotice = $notice;
+        $this->StuReport = $report;
+        $this->StuReply = $reply;
     }
 }
 $arrStudents = array();
@@ -34,7 +37,10 @@ if ($data) {
             $row['StudentClass'],
             $row['StudentPhone'],
             $row['StudentGender'],
-            $row['StudentActive']
+            $row['StudentActive'],
+            $row['StudentNotice'],
+            $row['StudentReport'],
+            $row['StudentReply']
         ));
     }
     if (count($arrStudents) > 0) {

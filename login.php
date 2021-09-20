@@ -33,7 +33,7 @@ class Student
         $this->StuPhone = $phone;
         $this->StuGender = $gender;
         $this->StuActive = $active;
-        $this->StuNotice = $report;
+        $this->StuNotice = $notice;
         $this->StuReport = $report;
         $this->StuReply = $reply;
     }
